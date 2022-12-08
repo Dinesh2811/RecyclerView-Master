@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RecyclerViewMaster"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.RecyclerViewMaster">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity android:name=".java.RvMain"/>
+
+        <activity android:name=".java.basic.RvMain"/>
+        <activity android:name=".java.refresh.RvMain"/>
+        <activity android:name=".java.reorder.RvMain"/>
+        <activity android:name=".java.search.RvMain"/>
+        <activity android:name=".java.multi_view.RvMain"/>
+        <activity android:name=".java.nested.rv1.RvMain"/>
+        <activity android:name=".java.nested.rv1.NewActivity"/>
+        <activity android:name=".java.nested.rv2.RvMain"/>
+        <activity android:name=".java.listadapter.RvMain"/>
+
+        <activity android:name=".kotlin.expand.MainActivity"/>
+        <activity android:name=".kotlin.search.MainActivity"/>
+        <activity android:name=".kotlin.diffutill.MainActivity"/>
+        <activity android:name=".kotlin.swipegesture.SG_MainActivity"/>
+
+    </application>
+
+</manifest>
