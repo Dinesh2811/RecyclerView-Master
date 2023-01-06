@@ -29,6 +29,7 @@ class MainActivity : ComponentActivity() {
         }
 
         startActivity(Intent(this, com.dinesh.recyclerview.root.RvMain::class.java))
+
     }
 }
 
