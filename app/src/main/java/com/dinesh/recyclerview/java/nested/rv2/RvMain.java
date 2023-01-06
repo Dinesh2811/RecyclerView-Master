@@ -22,6 +22,7 @@ public class RvMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nested_rv2_main);
+        Log.i(TAG, "onCreate: " );
 
         initData();
 

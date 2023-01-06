@@ -25,13 +25,13 @@ public class RvMain extends AppCompatActivity implements RvInterface {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG, "onCreate: " );
         setContentView(R.layout.rv_main);
         recyclerView = findViewById(R.id.recyclerView);
 
         //Sample Model Data
         for (int i = 0; i < 25; i++) {
             rvModelList.add(new RvModel(R.drawable.ic_launcher_foreground, "User " + (i + 1), false));
-//            rvModelList.add(new RvModel(R.drawable.ic_baseline_drag_handle_24,"User "+i,false));
         }
 
         rvAdapter = new RvAdapter(rvModelList, RvMain.this);

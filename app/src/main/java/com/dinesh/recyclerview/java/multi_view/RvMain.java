@@ -35,6 +35,7 @@ public class RvMain extends AppCompatActivity implements RvInterface {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rv_main);
         recyclerView = findViewById(R.id.recyclerView);
+        Log.i(TAG, "onCreate: " );
 
         //Sample Model Data
         for (int i = 0; i < 25; i++) {

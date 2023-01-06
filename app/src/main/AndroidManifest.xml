@@ -47,6 +47,11 @@
         <activity android:name=".kotlin.diffutill.MainActivity"/>
         <activity android:name=".kotlin.swipegesture.SG_MainActivity"/>
 
+        <activity android:name=".root.RvMain"/>
+        <activity android:name=".root.test.Class_1"/>
+        <activity android:name=".root.test.Class_2"/>
+        <activity android:name=".root.test.Class_3"/>
+
     </application>
 
 </manifest>

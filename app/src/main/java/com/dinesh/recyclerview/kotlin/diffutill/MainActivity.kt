@@ -3,11 +3,13 @@ package com.dinesh.recyclerview.kotlin.diffutill
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.dinesh.recyclerview.R
 
 class MainActivity : AppCompatActivity() {
+    private val TAG = "log_" + MainActivity::class.java.name.split(MainActivity::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 //    https://www.howtodoandroid.com/update-android-recyclerview-using-diffutil/
 //    https://github.com/velmurugan-murugesan/Android-Example/tree/master/RecyclerviewDiffUtil
 
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.diffutill_activity_main)
+        Log.i(TAG, "onCreate: ")
 
         recyclerView = findViewById(R.id.recyclerview)
         recyclerView.adapter = userAdapter

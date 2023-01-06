@@ -43,7 +43,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-//        holder.iv_profilePic.setImageResource(rvModelList.get(position).profilePic);
+        holder.iv_profilePic.setImageResource(rvModelList.get(position).profilePic);
         holder.tv_name.setText(rvModelList.get(position).name);
         holder.tv_position.setText(String.valueOf(position));
 

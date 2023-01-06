@@ -2,6 +2,7 @@ package com.dinesh.recyclerview.kotlin.search
 
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -11,6 +12,7 @@ import com.dinesh.recyclerview.R
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    private val TAG = "log_" + MainActivity::class.java.name.split(MainActivity::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchView: SearchView
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_activity_main)
+        Log.i(TAG, "onCreate: ")
 
         recyclerView = findViewById(R.id.recyclerView)
         searchView = findViewById(R.id.searchView)
