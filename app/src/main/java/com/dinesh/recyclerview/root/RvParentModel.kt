@@ -5,5 +5,3 @@ data class RvParentModel(
     var rvChildModel: List<RvChildModel>,
     var isExpandable: Boolean = false
 )
-
-

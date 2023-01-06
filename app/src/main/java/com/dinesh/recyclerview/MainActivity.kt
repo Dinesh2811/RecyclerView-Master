@@ -27,6 +27,9 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+//        RvData.rvList().forEach {
+//        Log.d(TAG, "onCreate: ${it}")
+//        }
 
         startActivity(Intent(this, com.dinesh.recyclerview.root.RvMain::class.java))
 

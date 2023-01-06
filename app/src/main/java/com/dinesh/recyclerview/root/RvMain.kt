@@ -46,19 +46,29 @@ class RvMain : AppCompatActivity(), RvParentInterface {
 
     private fun filterList(query: String?) {
         if (query != null) {
-            val filteredList = ArrayList<RvParentModel>()
-            for (i in rvList()) {
-                if (i.packageName.lowercase(Locale.ROOT).contains(query)) {
-                    filteredList.add(i)
-                }
-            }
-
+            val filteredList = findMatchingParent(query, rvList())
             if (filteredList.isEmpty()) {
                 Log.e(TAG, "filterList: No Data found")
+                rvParentAdapter.setFilteredList(emptyList())
             } else {
                 rvParentAdapter.setFilteredList(filteredList)
             }
         }
+    }
+
+    private fun findMatchingParent(query: String, list: List<RvParentModel>): ArrayList<RvParentModel> {
+        val matchingParents = ArrayList<RvParentModel>()
+        for (parent in list) {
+            for (child in parent.rvChildModel) {
+                if (child.title.contains(query, ignoreCase = true)) {
+                    if (!matchingParents.contains(parent)) {
+                        matchingParents.add(parent)
+                    }
+                    break
+                }
+            }
+        }
+        return matchingParents
     }
 
     override fun onParentItemClick(view: View?, position: Int) {
