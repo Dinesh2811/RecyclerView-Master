@@ -21,6 +21,7 @@ object RvData {
         rvChildModelList.add(RvChildModel(Class.forName(com.dinesh.recyclerview.java.search.RvMain::class.java.name), "Search Recycler View"))
         rvChildModelList.add(RvChildModel(Class.forName(com.dinesh.recyclerview.java.reorder.RvMain::class.java.name), "Drag & Re-Order Recycler View"))
         rvChildModelList.add(RvChildModel(Class.forName(com.dinesh.recyclerview.java.refresh.RvMain::class.java.name), "Refresh Recycler View"))
+        rvChildModelList.add(RvChildModel(Class.forName(com.dinesh.recyclerview.java.multi_select.RvMain::class.java.name), "Multi Select Recycler View"))
         rvChildModelList.add(RvChildModel(Class.forName(com.dinesh.recyclerview.java.multi_view.RvMain::class.java.name), "MultiView Recycler View"))
         rvChildModelList.add(RvChildModel(Class.forName(com.dinesh.recyclerview.java.nested.rv2.RvMain::class.java.name), "Nested Recycler View"))
 
